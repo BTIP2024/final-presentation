@@ -33,13 +33,26 @@ title-slide-attributes:
 
 # INTRODUCTION {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
 
-## R is an open, purpose-designed, highly extensible, statistical and data analysis programming language; R enables research reproducibility from its extensive and comprehensive data management capabilities. {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+## R is an open, purpose-designed, highly extensible, statistical and data analysis programming language that enables research reproducibility from its extensive and comprehensive data management capabilities. {style="font-size: 30px; top: 100px;" data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+
+::: {class="columns"}
+:::: {class="column"}
+![](final-presentation_files/img/rstudio1.webp)
+::::
+:::: {class="column"}
+![](final-presentation_files/img/rstudio2.png){width=50% style="display: block; margin-left: auto; margin-right: auto;"}
+::::
+:::
 
 # RESEARCH QUESTIONS {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
 
 ## R still faces memory and processing limitations that also make computational reproducibility challenging {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
+![](final-presentation_files/img/proscons.webp)
+
 ## High-dimensional data such as scRNA sequences are ideal to process in cloud-based computing systems with higher computing resources {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+
+![](final-presentation_files/img/scrna.jpg)
 
 ## We aim to develop and implement the following bioinformatics functions, tools, widgets, or pipelines  {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
@@ -52,15 +65,28 @@ title-slide-attributes:
 
 # SIGNIFICANCE {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
 
-## A separation of concerns paradigm is implemented, making a complex system manageable and efficient to maintain, modify, debug, and develop {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+## By implementing a separation of concerns paradigm, we make a complex system manageable and efficient to maintain, modify, debug, and develop, thereby decoupling the roles of the analyst and the developer {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+
+::: {class="columns"}
+:::: {class="column"}
+![](final-presentation_files/img/soc.png)
+::::
+:::: {class="column"}
+![](final-presentation_files/img/rs.png){width=50% style="display: block; margin-left: auto; margin-right: auto;"}
+::::
+:::
 
 ## This research project, with cloud computing, should further promote reproducible research through computational reproducibility by having the datasets easily stored, shared, and analyzed. {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+
+![](final-presentation_files/img/reproducible.png)
 
 # METHODS {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
 
 ## The following key developments in scRNAseq processing pipeline were implemented {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
 ## The pre-processing of scRNA sequences pipeline is composed of 8 main steps based on the Seurat R package {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+
+![](final-presentation_files/img/pipeline.png)
 
 ## Dimensional reduction and visualization of scRNAseq data can be done using linear methods such as PCA and non-linear methods such as t-SNE and UMAP {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
