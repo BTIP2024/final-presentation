@@ -29,186 +29,257 @@ title-slide-attributes:
       transition: slide
       background-transition: fade
       transition-speed: slow
+editor: 
+  markdown: 
+    wrap: 72
 ---
 
 # INTRODUCTION {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
 
-
 ## R is an open, purpose-designed, highly extensible, statistical and data analysis programming language that enables research reproducibility from its extensive and comprehensive data management capabilities. {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow" style="position: absolute; top: 0; width: 100%; padding: 10px;"}
 
-::: {class="columns"}
-:::: {class="column"}
-![](final-presentation_files/img/rstudio1.webp){style="width: 100%; transition: transform 0.2s; transform: scale(1);" onmouseover="this.style.transform='scale(1.1)';" onmouseout="this.style.transform='scale(1)';"}
-::::
-:::: {class="column"}
-![](final-presentation_files/img/rstudio2.png){width=50% style="display: block; margin-left: auto; margin-right: auto; margin-top: 70px; width: 100%; transition: transform 0.2s; transform: scale(1);" onmouseover="this.style.transform='scale(1.1)';" onmouseout="this.style.transform='scale(1)';"}
-::::
+::: columns
+::: column
+![](final-presentation_files/img/rstudio1.webp){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+onmouseover="this.style.transform='scale(1.1)';"
+onmouseout="this.style.transform='scale(1)';"}
 :::
 
+::: column
+![](final-presentation_files/img/rstudio2.png){width="50%"
+style="display: block; margin-left: auto; margin-right: auto; margin-top: 70px; width: 100%; transition: transform 0.2s; transform: scale(1);"
+onmouseover="this.style.transform='scale(1.1)';"
+onmouseout="this.style.transform='scale(1)';"}
+:::
+:::
 
 # RESEARCH QUESTIONS {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
 
 ## R still faces memory and processing limitations that also make computational reproducibility challenging {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-![](final-presentation_files/img/proscons.webp){style="width: 100%; transition: transform 0.2s; transform: scale(1);" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"}
+![](final-presentation_files/img/proscons.webp){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+onmouseover="this.style.transform='scale(1.05)';"
+onmouseout="this.style.transform='scale(1)';"}
 
 ## High-dimensional data such as scRNA sequences are ideal to process in cloud-based computing systems with higher computing resources {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-![](final-presentation_files/img/scrna.jpg){style="width: 100%; transition: transform 0.2s; transform: scale(1);" onmouseover="this.style.transform='scale(1.02)';" onmouseout="this.style.transform='scale(1)';"}
+![](final-presentation_files/img/scrna.jpg){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+onmouseover="this.style.transform='scale(1.02)';"
+onmouseout="this.style.transform='scale(1)';"}
 
-## We aim to develop and implement the following bioinformatics functions, tools, widgets, or pipelines  {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+## We aim to develop and implement the following bioinformatics functions, tools, widgets, or pipelines {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-![](final-presentation_files/img/steps_projectdev.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"}
+![](final-presentation_files/img/steps_projectdev.png){style="display: block; margin-left: auto; margin-right: auto; width: 100%; transition: transform 0.2s; transform: scale(1);"
+onmouseover="this.style.transform='scale(1.05)';"
+onmouseout="this.style.transform='scale(1)';"}
 
-- Deploy the Rstudio, Shiny and OpenCPU servers using Docker
-- Easy development and access: OpenCPU, Shiny, & RStudio, can be accessed by the user in their browser using Docker
-- Application deployment: From git, an isolated and standalone application can be started via Docker
-- Expose as a stateless microservice using RESTful API and RPC the major steps in the scRNAseq pipeline and their visualizations 
-- Develop an interactive dashboard/reactive framework in Shiny for the scRNA pipeline
-
+-   Deploy the Rstudio, Shiny and OpenCPU servers using Docker
+-   Easy development and access: OpenCPU, Shiny, & RStudio, can be
+    accessed by the user in their browser using Docker
+-   Application deployment: From git, an isolated and standalone
+    application can be started via Docker
+-   Expose as a stateless microservice using RESTful API and RPC the
+    major steps in the scRNAseq pipeline and their visualizations
+-   Develop an interactive dashboard/reactive framework in Shiny for the
+    scRNA pipeline
 
 # SIGNIFICANCE {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
 
 ## By implementing a separation of concerns paradigm, we make a complex system manageable and efficient to maintain, modify, debug, and develop, thereby decoupling the roles of the analyst and the developer {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-::: {class="columns"}
-:::: {class="column"}
-![](final-presentation_files/img/soc.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"}
-::::
-:::: {class="column"}
-![](final-presentation_files/img/separation_concerns.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"}
-::::
+::: columns
+::: column
+![](final-presentation_files/img/soc.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+onmouseover="this.style.transform='scale(1.05)';"
+onmouseout="this.style.transform='scale(1)';"}
+:::
+
+::: column
+![](final-presentation_files/img/separation_concerns.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+onmouseover="this.style.transform='scale(1.05)';"
+onmouseout="this.style.transform='scale(1)';"}
+:::
 :::
 
 ## This research project, with cloud computing, should further promote reproducible research through computational reproducibility by having the datasets easily stored, shared, and analyzed. {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-![](final-presentation_files/img/reproducible.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"}
+![](final-presentation_files/img/reproducible.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+onmouseover="this.style.transform='scale(1.05)';"
+onmouseout="this.style.transform='scale(1)';"}
 
 # METHODS {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
 
 ## The following key developments in scRNAseq processing pipeline were implemented {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-![](final-presentation_files/img/steps_projectdev.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"}
+![](final-presentation_files/img/steps_projectdev.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+onmouseover="this.style.transform='scale(1.05)';"
+onmouseout="this.style.transform='scale(1)';"}
 
 ## The pre-processing of scRNA sequences pipeline is composed of 8 main steps based on the Seurat R package {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-![](final-presentation_files/img/pipeline.png){style="width: 50%; transition: transform 0.2s; transform: scale(1);" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"}
+![](final-presentation_files/img/pipeline.png){style="width: 50%; transition: transform 0.2s; transform: scale(1);"
+onmouseover="this.style.transform='scale(1.05)';"
+onmouseout="this.style.transform='scale(1)';"}
 
-![](final-presentation_files/img/flow.png){style="width: 70%; transition: transform 0.2s; transform: scale(1);" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"}
+![](final-presentation_files/img/flow.png){style="width: 70%; transition: transform 0.2s; transform: scale(1);"
+onmouseover="this.style.transform='scale(1.05)';"
+onmouseout="this.style.transform='scale(1)';"}
 
 ## Dimensional reduction and visualization of scRNAseq data can be done using linear methods such as PCA and non-linear methods such as t-SNE and UMAP {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-
 ## Beyond web application creation, Shiny empowers data scientists with interactive tools for exploration, visualization, and communication. {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
-    
-![](final-presentation_files/img/shiny-adv.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"}
-    
+
+![](final-presentation_files/img/shiny-adv.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+onmouseover="this.style.transform='scale(1.05)';"
+onmouseout="this.style.transform='scale(1)';"}
+
 ## The OpenCPU system is a server that exposes HTTP api for RPC and data interchange with R for embedded statistical computation (OpenCPU, n.d.). {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
-    
+
 ## The servers can be integrated and accessed via Docker which packages software into standardized units that can be built, tested, and deployed. {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-    
-::: {class="columns"}
-:::: {class="column"}
-![](final-presentation_files/img/docker.webp){style="width: 100%; transition: transform 0.2s; transform: scale(1);" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"}
-::::
-:::: {class="column"}
-![](final-presentation_files/img/docker.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"}
-::::
+::: columns
+::: column
+![](final-presentation_files/img/docker.webp){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+onmouseover="this.style.transform='scale(1.05)';"
+onmouseout="this.style.transform='scale(1)';"}
 :::
 
+::: column
+![](final-presentation_files/img/docker.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+onmouseover="this.style.transform='scale(1.05)';"
+onmouseout="this.style.transform='scale(1)';"}
+:::
+:::
 
 # RESULTS {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
 
 ## We developed scripts for the pre-processing of scRNAseq based on the R Seurat v5 package. {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-![](final-presentation_files/img/script.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"}
+![](final-presentation_files/img/script.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+onmouseover="this.style.transform='scale(1.05)';"
+onmouseout="this.style.transform='scale(1)';"}
 
 ## The packages were uploaded to git in their own separate repository. {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-![](final-presentation_files/img/packages.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"}
+![](final-presentation_files/img/packages.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+onmouseover="this.style.transform='scale(1.05)';"
+onmouseout="this.style.transform='scale(1)';"}
 
 ## We developed a shiny dashboard to run this pipeline interactively. {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-<div style="text-align: center;">
-  <video width="100%" controls>
-    <source src="final-presentation_files/img/dashboard.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</div>
-
+::: {style="text-align: center;"} <video width="100%" controls>
+<source src="final-presentation_files/img/dashboard.mp4" type="video/mp4">
+Your browser does not support the video tag. </video> :::
 
 ## We created dockerfiles to build the image layers and pushed them to Docker hub. {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-::: {class="columns"}
-:::: {class="column"}
-![](final-presentation_files/img/dockerfile.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"}
-::::
-:::: {class="column"}
-![](final-presentation_files/img/docker_container.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"}
-::::
+::: columns
+::: column
+![](final-presentation_files/img/dockerfile.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+onmouseover="this.style.transform='scale(1.05)';"
+onmouseout="this.style.transform='scale(1)';"}
 :::
 
+::: column
+![](final-presentation_files/img/docker_container.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+onmouseover="this.style.transform='scale(1.05)';"
+onmouseout="this.style.transform='scale(1)';"}
+:::
+:::
 
 ## We ran the containers in their respective ports and accessed them via our browsers. {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-![](final-presentation_files/img/dockersteps.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"}
+![](final-presentation_files/img/dockersteps.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+onmouseover="this.style.transform='scale(1.05)';"
+onmouseout="this.style.transform='scale(1)';"}
 
 ## Running the pre-processing scRNAseq pipeline via OpenCPU {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-<div style="text-align: center;">
-  <video width="100%" controls>
-    <source src="final-presentation_files/img/dashboard.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</div>
+::: {style="text-align: center;"} <video width="100%" controls>
+<source src="final-presentation_files/img/dashboard.mp4" type="video/mp4">
+Your browser does not support the video tag. </video> :::
 
 ## API documentation on how to run the scRNAseq pre-processing pipeline on OpenCPU {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-::: {class="columns"}
-:::: {class="column"}
-![](final-presentation_files/img/api0.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"}
-::::
-:::: {class="column"}
-![](final-presentation_files/img/api2.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"}
-::::
+::: columns
+::: column
+![](final-presentation_files/img/api0.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+onmouseover="this.style.transform='scale(1.05)';"
+onmouseout="this.style.transform='scale(1)';"}
+:::
+
+::: column
+![](final-presentation_files/img/api2.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+onmouseover="this.style.transform='scale(1.05)';"
+onmouseout="this.style.transform='scale(1)';"}
+:::
 :::
 
 # SYNTHESIS {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
 
-## We were able to deploy  RStudio, Shiny, and OpenCPU servers using Docker {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+## We were able to deploy RStudio, Shiny, and OpenCPU servers using Docker {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-![](final-presentation_files/img/servers_on_web.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"}
+![](final-presentation_files/img/servers_on_web.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+onmouseover="this.style.transform='scale(1.05)';"
+onmouseout="this.style.transform='scale(1)';"}
 
 ## We exposed a stateless microservice using RESTful API and RPC the major steps of the scRNAseq pipeline {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-![](final-presentation_files/img/automated_pipeline.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"}
+![](final-presentation_files/img/automated_pipeline.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+onmouseover="this.style.transform='scale(1.05)';"
+onmouseout="this.style.transform='scale(1)';"}
 
 ## We developed an interactive dashboard/reactive framework in Shiny for the scRNAseq pipeline {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-
-
 ## The project enhanced the reproducibility and efficiency in analyzing large datasets such as scRNA sequences through a robust, web-based pipeline deployment {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-- Developed a reproducible pipeline deployed via github and docker by using web-based servers with enough computing and memory resources to address the limitations of R
-- We are able to establish a separation of concerns paradigm by letting the users/clients focus on data analysis and the developers on the front/back end of application development.
-- Overall, this promotes reproducible research by enabling computational reproducibility and establishing a virtual commons.
+-   Developed a reproducible pipeline deployed via github and docker by
+    using web-based servers with enough computing and memory resources
+    to address the limitations of R
+-   We are able to establish a separation of concerns paradigm by
+    letting the users/clients focus on data analysis and the developers
+    on the front/back end of application development.
+-   Overall, this promotes reproducible research by enabling
+    computational reproducibility and establishing a virtual commons.
 
-![](final-presentation_files/img/final_photo.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"}
-
+![](final-presentation_files/img/final_photo.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+onmouseover="this.style.transform='scale(1.05)';"
+onmouseout="this.style.transform='scale(1)';"}
 
 # REFERENCES {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
 
 ## REFERENCES {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-- R Core Team (2024). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. URL https://www.R-project.org/.
-Hao Y, Stuart T, Kowalski MH, Choudhary S, Hoffman P, Hartman A, Srivastava A, Molla G, Madad S, Fernandez-Granda C, Satija R (2023). “Dictionary learning for integrative, multimodal and scalable single-cell analysis.” Nature Biotechnology. doi:10.1038/s41587-023-01767-y, https://doi.org/10.1038/s41587-023-01767-y.
-- Hao Y, Hao S, Andersen-Nissen E, III WMM, Zheng S, Butler A, Lee MJ, Wilk AJ, Darby C, Zagar M, Hoffman P, Stoeckius M, Papalexi E, Mimitou EP, Jain J, Srivastava A, Stuart T, Fleming LB, Yeung B, Rogers AJ, McElrath JM, Blish CA, Gottardo R, Smibert P, Satija R (2021). “Integrated analysis of multimodal single-cell data.” Cell. doi:10.1016/j.cell.2021.04.048, https://doi.org/10.1016/j.cell.2021.04.048.
+-   R Core Team (2024). R: A language and environment for statistical
+    computing. R Foundation for Statistical Computing, Vienna, Austria.
+    URL https://www.R-project.org/. Hao Y, Stuart T, Kowalski MH,
+    Choudhary S, Hoffman P, Hartman A, Srivastava A, Molla G, Madad S,
+    Fernandez-Granda C, Satija R (2023). “Dictionary learning for
+    integrative, multimodal and scalable single-cell analysis.” Nature
+    Biotechnology. doi:10.1038/s41587-023-01767-y,
+    https://doi.org/10.1038/s41587-023-01767-y.
+-   Hao Y, Hao S, Andersen-Nissen E, III WMM, Zheng S, Butler A, Lee MJ,
+    Wilk AJ, Darby C, Zagar M, Hoffman P, Stoeckius M, Papalexi E,
+    Mimitou EP, Jain J, Srivastava A, Stuart T, Fleming LB, Yeung B,
+    Rogers AJ, McElrath JM, Blish CA, Gottardo R, Smibert P, Satija R
+    (2021). “Integrated analysis of multimodal single-cell data.” Cell.
+    doi:10.1016/j.cell.2021.04.048,
+    https://doi.org/10.1016/j.cell.2021.04.048.
 
 ## REFERENCES {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-- Stuart T, Butler A, Hoffman P, Hafemeister C, Papalexi E, III WMM, Hao Y, Stoeckius M, Smibert P, Satija R (2019). “Comprehensive Integration of Single-Cell Data.” Cell, 177, 1888-1902. doi:10.1016/j.cell.2019.05.031, https://doi.org/10.1016/j.cell.2019.05.031.
-- Butler A, Hoffman P, Smibert P, Papalexi E, Satija R (2018). “Integrating single-cell transcriptomic data across different conditions, technologies, and species.” Nature Biotechnology, 36, 411-420. doi:10.1038/nbt.4096, https://doi.org/10.1038/nbt.4096.
-- Satija R, Farrell JA, Gennert D, Schier AF, Regev A (2015). “Spatial reconstruction of single-cell gene expression data.” Nature Biotechnology, 33, 495-502. doi:10.1038/nbt.3192, https://doi.org/10.1038/nbt.3192.
+-   Stuart T, Butler A, Hoffman P, Hafemeister C, Papalexi E, III WMM,
+    Hao Y, Stoeckius M, Smibert P, Satija R (2019). “Comprehensive
+    Integration of Single-Cell Data.” Cell, 177, 1888-1902.
+    doi:10.1016/j.cell.2019.05.031,
+    https://doi.org/10.1016/j.cell.2019.05.031.
+-   Butler A, Hoffman P, Smibert P, Papalexi E, Satija R (2018).
+    “Integrating single-cell transcriptomic data across different
+    conditions, technologies, and species.” Nature Biotechnology, 36,
+    411-420. doi:10.1038/nbt.4096, https://doi.org/10.1038/nbt.4096.
+-   Satija R, Farrell JA, Gennert D, Schier AF, Regev A (2015). “Spatial
+    reconstruction of single-cell gene expression data.” Nature
+    Biotechnology, 33, 495-502. doi:10.1038/nbt.3192,
+    https://doi.org/10.1038/nbt.3192.
 
 # THANK YOU! {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
