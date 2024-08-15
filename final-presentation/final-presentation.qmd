@@ -57,31 +57,37 @@ onmouseout="this.style.transform='scale(1)';"}
 
 ## R still faces memory and processing limitations that also make computational reproducibility challenging {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-![](final-presentation_files/img/proscons.webp){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+![](final-presentation_files/img/proscons.webp){style="width: 100%; transition: transform 0.2s; transform: scale(1); display: block; margin-left: auto; margin-right: auto;"
 onmouseover="this.style.transform='scale(1.05)';"
 onmouseout="this.style.transform='scale(1)';"}
 
 ## High-dimensional data such as scRNA sequences are ideal to process in cloud-based computing systems with higher computing resources {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-![](final-presentation_files/img/scrna.jpg){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+![](final-presentation_files/img/scrna.jpg){style="width: 100%; transition: transform 0.2s; transform: scale(1); display: block; margin-left: auto; margin-right: auto;"
 onmouseover="this.style.transform='scale(1.02)';"
 onmouseout="this.style.transform='scale(1)';"}
 
 ## We aim to develop and implement the following bioinformatics functions, tools, widgets, or pipelines {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
+::: columns
+::: column
 ![](final-presentation_files/img/steps_projectdev.png){style="display: block; margin-left: auto; margin-right: auto; width: 100%; transition: transform 0.2s; transform: scale(1);"
 onmouseover="this.style.transform='scale(1.05)';"
 onmouseout="this.style.transform='scale(1)';"}
+:::
 
--   Deploy the Rstudio, Shiny and OpenCPU servers using Docker
--   Easy development and access: OpenCPU, Shiny, & RStudio, can be
-    accessed by the user in their browser using Docker
--   Application deployment: From git, an isolated and standalone
-    application can be started via Docker
--   Expose as a stateless microservice using RESTful API and RPC the
-    major steps in the scRNAseq pipeline and their visualizations
--   Develop an interactive dashboard/reactive framework in Shiny for the
-    scRNA pipeline
+::: column
+:::{.incremental}
+- Deploy the RStudio, Shiny, and OpenCPU servers using Docker
+- Easy development and access: OpenCPU, Shiny, & RStudio, can be accessed by the user in their browser using Docker
+- Application deployment: From git, an isolated and standalone application can be started via Docker
+- Expose as a stateless microservice using RESTful API and RPC the major steps in the scRNAseq pipeline and their visualizations
+- Develop an interactive dashboard/reactive framework in Shiny for the scRNA pipeline
+:::
+:::
+:::
+
+
 
 # SIGNIFICANCE {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
 
@@ -103,7 +109,7 @@ onmouseout="this.style.transform='scale(1)';"}
 
 ## This research project, with cloud computing, should further promote reproducible research through computational reproducibility by having the datasets easily stored, shared, and analyzed. {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-![](final-presentation_files/img/reproducible.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+![](final-presentation_files/img/reproducible.png){style="width: 100%; transition: transform 0.2s; transform: scale(1); display: block; margin-left: auto; margin-right: auto;"
 onmouseover="this.style.transform='scale(1.05)';"
 onmouseout="this.style.transform='scale(1)';"}
 
@@ -111,17 +117,15 @@ onmouseout="this.style.transform='scale(1)';"}
 
 ## The following key developments in scRNAseq processing pipeline were implemented {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-![](final-presentation_files/img/steps_projectdev.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
-onmouseover="this.style.transform='scale(1.05)';"
-onmouseout="this.style.transform='scale(1)';"}
+![](final-presentation_files/img/steps_projectdev.png){style="width: 100%; transition: transform 0.2s; transform: scale(1); display: block; margin-left: auto; margin-right: auto;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"}
 
 ## The pre-processing of scRNA sequences pipeline is composed of 8 main steps based on the Seurat R package {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-![](final-presentation_files/img/pipeline.png){style="width: 50%; transition: transform 0.2s; transform: scale(1);"
+![](final-presentation_files/img/pipeline.png){style="width: 50%; transition: transform 0.2s; transform: scale(1); display: block; margin-left: auto; margin-right: auto;"
 onmouseover="this.style.transform='scale(1.05)';"
 onmouseout="this.style.transform='scale(1)';"}
 
-![](final-presentation_files/img/flow.png){style="width: 70%; transition: transform 0.2s; transform: scale(1);"
+![](final-presentation_files/img/flow.png){style="width: 70%; transition: transform 0.2s; transform: scale(1); display: block; margin-left: auto; margin-right: auto;"
 onmouseover="this.style.transform='scale(1.05)';"
 onmouseout="this.style.transform='scale(1)';"}
 
@@ -129,7 +133,7 @@ onmouseout="this.style.transform='scale(1)';"}
 
 ## Beyond web application creation, Shiny empowers data scientists with interactive tools for exploration, visualization, and communication. {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-![](final-presentation_files/img/shiny-adv.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+![](final-presentation_files/img/shiny-adv.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);display: block; margin-left: auto; margin-right: auto;"
 onmouseover="this.style.transform='scale(1.05)';"
 onmouseout="this.style.transform='scale(1)';"}
 
@@ -155,13 +159,13 @@ onmouseout="this.style.transform='scale(1)';"}
 
 ## We developed scripts for the pre-processing of scRNAseq based on the R Seurat v5 package. {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-![](final-presentation_files/img/script.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+![](final-presentation_files/img/script.png){style="width: 100%; transition: transform 0.2s; transform: scale(1); display: block; margin-left: auto; margin-right: auto;"
 onmouseover="this.style.transform='scale(1.05)';"
 onmouseout="this.style.transform='scale(1)';"}
 
 ## The packages were uploaded to git in their own separate repository. {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-![](final-presentation_files/img/packages.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+![](final-presentation_files/img/packages.png){style="width: 100%; transition: transform 0.2s; transform: scale(1); display: block; margin-left: auto; margin-right: auto;"
 onmouseover="this.style.transform='scale(1.05)';"
 onmouseout="this.style.transform='scale(1)';"}
 
@@ -175,7 +179,7 @@ Your browser does not support the video tag. </video> :::
 
 ::: columns
 ::: column
-![](final-presentation_files/img/dockerfile.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+![](final-presentation_files/img/dockerfile.png){style="width: 100%; transition: transform 0.2s; transform: scale(1); display: block; margin-left: auto; margin-right: auto;"
 onmouseover="this.style.transform='scale(1.05)';"
 onmouseout="this.style.transform='scale(1)';"}
 :::
@@ -189,7 +193,7 @@ onmouseout="this.style.transform='scale(1)';"}
 
 ## We ran the containers in their respective ports and accessed them via our browsers. {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-![](final-presentation_files/img/dockersteps.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+![](final-presentation_files/img/dockersteps.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);display: block; margin-left: auto; margin-right: auto;"
 onmouseover="this.style.transform='scale(1.05)';"
 onmouseout="this.style.transform='scale(1)';"}
 
@@ -203,13 +207,13 @@ Your browser does not support the video tag. </video> :::
 
 ::: columns
 ::: column
-![](final-presentation_files/img/api0.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+![](final-presentation_files/img/api0.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);display: block; margin-left: auto; margin-right: auto;"
 onmouseover="this.style.transform='scale(1.05)';"
 onmouseout="this.style.transform='scale(1)';"}
 :::
 
 ::: column
-![](final-presentation_files/img/api2.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+![](final-presentation_files/img/api2.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);display: block; margin-left: auto; margin-right: auto;"
 onmouseover="this.style.transform='scale(1.05)';"
 onmouseout="this.style.transform='scale(1)';"}
 :::
@@ -219,13 +223,13 @@ onmouseout="this.style.transform='scale(1)';"}
 
 ## We were able to deploy RStudio, Shiny, and OpenCPU servers using Docker {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-![](final-presentation_files/img/servers_on_web.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+![](final-presentation_files/img/servers_on_web.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);display: block; margin-left: auto; margin-right: auto;"
 onmouseover="this.style.transform='scale(1.05)';"
 onmouseout="this.style.transform='scale(1)';"}
 
 ## We exposed a stateless microservice using RESTful API and RPC the major steps of the scRNAseq pipeline {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-![](final-presentation_files/img/automated_pipeline.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+![](final-presentation_files/img/automated_pipeline.png){style="width: 100%; transition: transform 0.2s; transform: scale(1); display: block; margin-left: auto; margin-right: auto;"
 onmouseover="this.style.transform='scale(1.05)';"
 onmouseout="this.style.transform='scale(1)';"}
 
@@ -242,9 +246,7 @@ onmouseout="this.style.transform='scale(1)';"}
 -   Overall, this promotes reproducible research by enabling
     computational reproducibility and establishing a virtual commons.
 
-![](final-presentation_files/img/final_photo.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
-onmouseover="this.style.transform='scale(1.05)';"
-onmouseout="this.style.transform='scale(1)';"}
+![](final-presentation_files/img/final_photo.png){style="width: 100%; transition: transform 0.2s; transform: scale(1); display: block; margin-left: auto; margin-right: auto;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"}
 
 # REFERENCES {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
 
