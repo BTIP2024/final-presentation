@@ -1,5 +1,5 @@
 ---
-title: "PGC Internship 2024: R Team - 2nd Progress Report"
+title: "PGC Internship 2024: R Team - Final Presentation"
 author: "[Mentor] Mark Joseph Garrovillas, RCh, Tyrone Mariano, Leda Celeste Samin"
 date: last-modified
 institution: "Core Facility for Bioinformatics"
@@ -31,7 +31,7 @@ title-slide-attributes:
       transition-speed: slow
 ---
 
-# PROJECT RECAP {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
+# INTRODUCTION {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
 
 ## Using the Seurat scRNAseq preprocessing pipeline and visualize the data in lower dimensions (t-SNE) {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
@@ -81,11 +81,15 @@ plot
 
 -   Are we going to use Docker for containerizing the customized package or the Shiny app?
 
-# ACCOMPLISHMENTS {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
+# RESEARCH QUESTIONS {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
 
-# CHALLENGES {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
+# SIGNIFICANCE {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
 
-# FOR NEXT WEEK {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
+# METHODS {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
+
+# RESULTS {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
+
+# SYNTHESIS {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
 
 # REFERENCES {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
 
@@ -100,4 +104,4 @@ plot
     -   <https://pmirla.github.io/archive/opencpu/index.html>
     -   \<https://www.bioconductor.org/packages/release/workflows/vignettes/sequencing/inst/doc/sequencing.htm
 
-# Thank You! {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+# THANK YOU! {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
