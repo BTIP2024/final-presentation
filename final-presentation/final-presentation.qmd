@@ -33,6 +33,8 @@ title-slide-attributes:
 
 # INTRODUCTION {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
 
+{{< video dashboard.mp4 >}}
+
 ## R is an open, purpose-designed, highly extensible, statistical and data analysis programming language; R enables research reproducibility from its extensive and comprehensive data management capabilities. {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
 # RESEARCH QUESTIONS {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
