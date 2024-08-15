@@ -33,63 +33,82 @@ title-slide-attributes:
 
 # INTRODUCTION {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
 
-## Using the Seurat scRNAseq preprocessing pipeline and visualize the data in lower dimensions (t-SNE) {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
-
-```{r setup, echo=F}
-library(Seurat)
-library(tidyverse)
-library(shiny)
-library(DT)
-library(crosstalk)
-library(plotly)
-
-pbmc <- readRDS("~/Desktop/pgc-dim-red/presentations/progress-report_03/progress-rep03_files/data/pbmc_tutorial.rds")
-pbmc <- RunTSNE(pbmc, dims = 1:10, dim.embed = 3)
-
-# Extract tSNE information from Seurat Object
-tsne_1 <- pbmc[["tsne"]]@cell.embeddings[,1]
-tsne_2 <- pbmc[["tsne"]]@cell.embeddings[,2]
-tsne_3 <- pbmc[["tsne"]]@cell.embeddings[,3]
-
-# Prepare a dataframe for cell plotting
-plot.data <- FetchData(object = pbmc, vars = c("tSNE_1", "tSNE_2", "tSNE_3", "seurat_clusters"))
-
-# Make a column of row name identities (these will be your cell/barcode names)
-plot.data$label <- paste(rownames(plot.data))
-
-plot <- plot_ly(data = plot.data, x = ~tSNE_1, y = ~tSNE_2, z = ~tSNE_3, 
-                color = ~seurat_clusters,
-                type = "scatter3d",
-                mode = "markers",
-                marker = list(size = 5, width=2), # controls size of points
-                text=~label, #This is that extra column we made earlier for which we will use 
-                hoverinfo="text") #When you visualize your plotly object, hovering your mouse pointer over a point shows cell names
-
-plot <- plot %>% layout(width = "100%", height = 500)
-
-plot
-```
-
-## Using the Seurat scRNAseq preprocessing pipeline and visualize the data in lower dimensions (UMAP) {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
-
-::: {.fragment fragment-index="2"}
--   Created customized R package containing wrapper functions for Seurat pre-processing pipeline
-:::
-
-
-## Questions that were posed during the previous presentation{data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
-
--   Are we going to use Docker for containerizing the customized package or the Shiny app?
+## R is an open, purpose-designed, highly extensible, statistical and data analysis programming language; R enables research reproducibility from its extensive and comprehensive data management capabilities. {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
 # RESEARCH QUESTIONS {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
 
+## R still faces memory and processing limitations that also make computational reproducibility challenging {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+
+## High-dimensional data such as scRNA sequences are ideal to process in cloud-based computing systems with higher computing resources {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+
+## We aim to develop and implement the following bioinformatics functions, tools, widgets, or pipelines  {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+
+- Deploy the Rstudio, Shiny and OpenCPU servers using Docker
+- Easy development and access: OpenCPU, Shiny, & RStudio, can be accessed by the user in their browser using Docker
+- Application deployment: From git, an isolated and standalone application can be started via Docker
+- Expose as a stateless microservice using RESTful API and RPC the major steps in the scRNAseq pipeline and their visualizations 
+- Develop an interactive dashboard/reactive framework in Shiny for the scRNA pipeline
+
+
 # SIGNIFICANCE {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
+
+## A separation of concerns paradigm is implemented, making a complex system manageable and efficient to maintain, modify, debug, and develop {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+
+## This research project, with cloud computing, should further promote reproducible research through computational reproducibility by having the datasets easily stored, shared, and analyzed. {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
 # METHODS {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
 
+## The following key developments in scRNAseq processing pipeline were implemented {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+
+## The pre-processing of scRNA sequences pipeline is composed of 8 main steps based on the Seurat R package {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+
+## Dimensional reduction and visualization of scRNAseq data can be done using linear methods such as PCA and non-linear methods such as t-SNE and UMAP {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+
+## Servers {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+
+- Shiny
+    - [description - why/how we’ll use it]
+    - Beyond web application creation, Shiny empowers data scientists with interactive tools for exploration, visualization, and communication.
+- OpenCPU
+    - The OpenCPU system is a server that exposes HTTP api for RPC and data interchange with R for embedded statistical computation (OpenCPU, n.d.).
+- Docker
+    - The servers can be integrated and accessed via Docker which packages software into standardized units that can be built, tested, and deployed.
+
+
 # RESULTS {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
 
+## We developed scripts for the pre-processing of scRNAseq based on the R Seurat v5 package. {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+
+## The packages were uploaded to git in their own separate repository. {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+
+## We developed a shiny dashboard to run this pipeline interactively. {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+
+## We developed a shiny dashboard to run this pipeline interactively (more shiny dashboard things) {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+
+##  We developed a shiny dashboard to run this pipeline interactively (more shiny dashboard things) {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+
+## We created dockerfiles to build the image layers and pushed them to Docker hub. {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+
+## We ran the containers in their respective ports and accessed them via our browsers. {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+
+## Running the pre-processing scRNAseq pipeline via OpenCPU {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+
+## API documentation on how to run the scRNAseq pre-processing pipeline on OpenCPU {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+
 # SYNTHESIS {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
+
+## We were able to deploy  RStudio, Shiny, and OpenCPU servers using Docker {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+
+## We exposed a stateless microservice using RESTful API and RPC the major steps of the scRNAseq pipeline {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+
+## We developed an interactive dashboard/reactive framework in Shiny for the scRNAseq pipeline {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+
+## The project enhanced the reproducibility and efficiency in analyzing large datasets such as scRNA sequences through a robust, web-based pipeline deployment {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+
+- Developed a reproducible pipeline deployed via github and docker by using web-based servers with enough computing and memory resources to address the limitations of R
+- We are able to establish a separation of concerns paradigm by letting the users/clients focus on data analysis and the developers on the front/back end of application development.
+- Overall, this promotes reproducible research by enabling computational reproducibility and establishing a virtual commons.
+
 
 # REFERENCES {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
 
