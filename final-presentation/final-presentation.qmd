@@ -1,0 +1,103 @@
+---
+title: "PGC Internship 2024: R Team - 2nd Progress Report"
+author: "[Mentor] Mark Joseph Garrovillas, RCh, Tyrone Mariano, Leda Celeste Samin"
+date: last-modified
+institution: "Core Facility for Bioinformatics"
+format: 
+  revealjs:
+    date-format: long
+    slide-number: c/t
+    width: 1920
+    height: 1080
+    theme: custom.scss
+    navigation-mode: vertical
+    controls-layout: bottom-right
+    controls-tutorial: true
+    preview-links: auto
+    slide-level: 3
+    multiplex: true
+    chalkboard: 
+      boardmarker-width: 5
+    search:
+    transition: slide
+    background-transition: fade
+    transition-speed: slow
+title-slide-attributes:
+      data-background: final-presentation_files/img/title-slide.png
+      data-background-size: cover
+      data-background-color: "#000"
+      transition: slide
+      background-transition: fade
+      transition-speed: slow
+---
+
+# PROJECT RECAP {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
+
+## Using the Seurat scRNAseq preprocessing pipeline and visualize the data in lower dimensions (t-SNE) {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+
+```{r setup, echo=F}
+library(Seurat)
+library(tidyverse)
+library(shiny)
+library(DT)
+library(crosstalk)
+library(plotly)
+
+pbmc <- readRDS("~/Desktop/pgc-dim-red/presentations/progress-report_03/progress-rep03_files/data/pbmc_tutorial.rds")
+pbmc <- RunTSNE(pbmc, dims = 1:10, dim.embed = 3)
+
+# Extract tSNE information from Seurat Object
+tsne_1 <- pbmc[["tsne"]]@cell.embeddings[,1]
+tsne_2 <- pbmc[["tsne"]]@cell.embeddings[,2]
+tsne_3 <- pbmc[["tsne"]]@cell.embeddings[,3]
+
+# Prepare a dataframe for cell plotting
+plot.data <- FetchData(object = pbmc, vars = c("tSNE_1", "tSNE_2", "tSNE_3", "seurat_clusters"))
+
+# Make a column of row name identities (these will be your cell/barcode names)
+plot.data$label <- paste(rownames(plot.data))
+
+plot <- plot_ly(data = plot.data, x = ~tSNE_1, y = ~tSNE_2, z = ~tSNE_3, 
+                color = ~seurat_clusters,
+                type = "scatter3d",
+                mode = "markers",
+                marker = list(size = 5, width=2), # controls size of points
+                text=~label, #This is that extra column we made earlier for which we will use 
+                hoverinfo="text") #When you visualize your plotly object, hovering your mouse pointer over a point shows cell names
+
+plot <- plot %>% layout(width = "100%", height = 500)
+
+plot
+```
+
+## Using the Seurat scRNAseq preprocessing pipeline and visualize the data in lower dimensions (UMAP) {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+
+::: {.fragment fragment-index="2"}
+-   Created customized R package containing wrapper functions for Seurat pre-processing pipeline
+:::
+
+
+## Questions that were posed during the previous presentation{data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+
+-   Are we going to use Docker for containerizing the customized package or the Shiny app?
+
+# ACCOMPLISHMENTS {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
+
+# CHALLENGES {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
+
+# FOR NEXT WEEK {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
+
+# REFERENCES {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
+
+## REFERENCES {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+
+-   Journal Articles:
+
+    -   <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9148156/>
+
+-   Web Articles:
+
+    -   <https://pmirla.github.io/archive/opencpu/index.html>
+    -   \<https://www.bioconductor.org/packages/release/workflows/vignettes/sequencing/inst/doc/sequencing.htm
+
+# Thank You! {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
