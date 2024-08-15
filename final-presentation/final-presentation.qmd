@@ -33,22 +33,19 @@ title-slide-attributes:
 
 # INTRODUCTION {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
 
-<<<<<<< HEAD
+
 ## R is an open, purpose-designed, highly extensible, statistical and data analysis programming language that enables research reproducibility from its extensive and comprehensive data management capabilities. {style="font-size: 30px; top: 100px;" data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-::: {class="columns"}
-:::: {class="column"}
-![](final-presentation_files/img/rstudio1.webp)
-::::
-:::: {class="column"}
-![](final-presentation_files/img/rstudio2.png){width=50% style="display: block; margin-left: auto; margin-right: auto;"}
-::::
-:::
-=======
-{{< video dashboard.mp4 >}}
+
+<div style="text-align: center;">
+  <video width="100%" controls>
+    <source src="final-presentation_files/img/dashboard.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
 
 ## R is an open, purpose-designed, highly extensible, statistical and data analysis programming language; R enables research reproducibility from its extensive and comprehensive data management capabilities. {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
->>>>>>> ee07bf03e322866b741c9acadab5238a3e676cbb
+
 
 # RESEARCH QUESTIONS {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
 
