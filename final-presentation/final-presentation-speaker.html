@@ -7,10 +7,12 @@
 <link href="final-presentation_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="final-presentation_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="final-presentation_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="final-presentation_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.5.56">
+<link href="final-presentation_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="final-presentation_files/libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="final-presentation_files/libs/quarto-contrib/videojs/video-js.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.5.54">
 
-  <meta name="author" content="[Mentor] Mark Joseph Garrovillas, RCh, Tyrone Mariano, Leda Celeste Samin">
+  <meta name="author" content="[Mentor] Mark Joseph Garrovillas, RCh, Leda Celeste Samin, Tyrone Mariano">
   <meta name="dcterms.date" content="2024-08-16">
   <title>PGC Internship 2024: R Team - Final Presentation</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -334,13 +336,18 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-[Mentor] Mark Joseph Garrovillas, RCh, Tyrone Mariano, Leda Celeste Samin 
+[Mentor] Mark Joseph Garrovillas, RCh, Leda Celeste Samin, Tyrone Mariano 
 </div>
 </div>
 </div>
 
   <p class="date">August 16, 2024</p>
 </section>
+<section id="deployment-of-rstudio-server-shiny-server-and-opencpu-server-for-dimensional-reduction-applications-with-an-scrnaseq-bioinformatics-pipeline" class="title-slide slide level1 center" data-background="final-presentation_files/img/topic-slide.png" data-transition="fade-in slide-out" data-transition-speed="slow">
+<h1>Deployment of Rstudio Server, Shiny Server and OpenCPU Server for Dimensional Reduction Applications with an scRNAseq Bioinformatics Pipeline</h1>
+
+</section>
+
 <section>
 <section id="introduction" class="title-slide slide level1 center" data-background="final-presentation_files/img/topic-slide.png" data-transition="fade-in slide-out" data-transition-speed="slow">
 <h1>INTRODUCTION</h1>
@@ -375,16 +382,20 @@
 <h2>We aim to develop and implement the following bioinformatics functions, tools, widgets, or pipelines</h2>
 <div class="columns">
 <div class="column">
-<p><img data-src="final-presentation_files/img/steps_projectdev.png" style="display: block; margin-left: auto; margin-right: auto; width: 100%; transition: transform 0.2s; transform: scale(1);" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"></p>
+<p><img data-src="final-presentation_files/img/steps_projectdev.png" style="display: block; margin-left: auto; margin-right: auto; width: 150%; transition: transform 0.2s; transform: scale(1);" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"></p>
 </div><div class="column">
 <div>
-<ul>
+<ol type="1">
 <li class="fragment">Deploy the RStudio, Shiny, and OpenCPU servers using Docker</li>
+</ol>
+<ul>
 <li class="fragment">Easy development and access: OpenCPU, Shiny, &amp; RStudio, can be accessed by the user in their browser using Docker</li>
 <li class="fragment">Application deployment: From git, an isolated and standalone application can be started via Docker</li>
+</ul>
+<ol start="2" type="1">
 <li class="fragment">Expose as a stateless microservice using RESTful API and RPC the major steps in the scRNAseq pipeline and their visualizations</li>
 <li class="fragment">Develop an interactive dashboard/reactive framework in Shiny for the scRNA pipeline</li>
-</ul>
+</ol>
 </div>
 </div></div>
 </section>
@@ -404,8 +415,8 @@
 </div></div>
 </section>
 
-<section id="this-research-project-with-cloud-computing-should-further-promote-reproducible-research-through-computational-reproducibility-by-having-the-datasets-easily-stored-shared-and-analyzed." class="title-slide slide level2 center" data-background="final-presentation_files/img/subtopic-slide-2-1.png" data-transition="fade-in slide-out" data-transition-speed="slow">
-<h2>This research project, with cloud computing, should further promote reproducible research through computational reproducibility by having the datasets easily stored, shared, and analyzed.</h2>
+<section id="a-reproducible-data-analysis-workflow-is-implemented-with-tools-like-github-docker-and-rmarkdown-which-interact-to-manage-versions-dependencies-environments-and-a-dynamic-document-generation." class="title-slide slide level2 center" data-background="final-presentation_files/img/subtopic-slide-2-1.png" data-transition="fade-in slide-out" data-transition-speed="slow">
+<h2>A reproducible data analysis workflow is implemented with tools like GitHub, Docker, and RMarkdown which interact to manage versions, dependencies, environments and a dynamic document generation.</h2>
 
 <img data-src="final-presentation_files/img/reproducible.png" style="width: 100%; transition: transform 0.2s; transform: scale(1); display: block; margin-left: auto; margin-right: auto;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';" class="r-stretch"></section>
 </section>
@@ -419,8 +430,8 @@
 
 <img data-src="final-presentation_files/img/steps_projectdev.png" style="width: 100%; transition: transform 0.2s; transform: scale(1); display: block; margin-left: auto; margin-right: auto;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';" class="r-stretch"></section>
 
-<section id="the-pre-processing-of-scrna-sequences-pipeline-is-composed-of-8-main-steps-based-on-the-seurat-r-package" class="title-slide slide level2 center" data-background="final-presentation_files/img/subtopic-slide-2-1.png" data-transition="fade-in slide-out" data-transition-speed="slow">
-<h2>The pre-processing of scRNA sequences pipeline is composed of 8 main steps based on the Seurat R package</h2>
+<section id="general-workflow-for-analyzing-scrnaseq-for-gene-expression-at-the-individual-level." class="title-slide slide level2 center" data-background="final-presentation_files/img/subtopic-slide-2-1.png" data-transition="fade-in slide-out" data-transition-speed="slow">
+<h2>General workflow for analyzing scRNAseq for gene expression at the individual level.</h2>
 <p><img data-src="final-presentation_files/img/pipeline.png" style="width: 50%; transition: transform 0.2s; transform: scale(1); display: block; margin-left: auto; margin-right: auto;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"></p>
 <p><img data-src="final-presentation_files/img/flow.png" style="width: 70%; transition: transform 0.2s; transform: scale(1); display: block; margin-left: auto; margin-right: auto;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"></p>
 </section>
@@ -428,7 +439,7 @@
 <section id="dimensional-reduction-and-visualization-of-scrnaseq-data-can-be-done-using-linear-methods-such-as-pca-and-non-linear-methods-such-as-t-sne-and-umap" class="title-slide slide level2 center" data-background="final-presentation_files/img/subtopic-slide-2-1.png" data-transition="fade-in slide-out" data-transition-speed="slow">
 <h2>Dimensional reduction and visualization of scRNAseq data can be done using linear methods such as PCA and non-linear methods such as t-SNE and UMAP</h2>
 
-</section>
+<img data-src="final-presentation_files/img/three_plots.png" style="width: 100%; transition: transform 0.2s; transform: scale(1); display: block; margin-left: auto; margin-right: auto;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';" class="r-stretch"></section>
 
 <section id="beyond-web-application-creation-shiny-empowers-data-scientists-with-interactive-tools-for-exploration-visualization-and-communication." class="title-slide slide level2 center" data-background="final-presentation_files/img/subtopic-slide-2-1.png" data-transition="fade-in slide-out" data-transition-speed="slow">
 <h2>Beyond web application creation, Shiny empowers data scientists with interactive tools for exploration, visualization, and communication.</h2>
@@ -438,7 +449,7 @@
 <section id="the-opencpu-system-is-a-server-that-exposes-http-api-for-rpc-and-data-interchange-with-r-for-embedded-statistical-computation-opencpu-n.d.." class="title-slide slide level2 center" data-background="final-presentation_files/img/subtopic-slide-2-1.png" data-transition="fade-in slide-out" data-transition-speed="slow">
 <h2>The OpenCPU system is a server that exposes HTTP api for RPC and data interchange with R for embedded statistical computation (OpenCPU, n.d.).</h2>
 
-</section>
+<img data-src="final-presentation_files/img/opencpu_webpage.png" style="width: 100%; transition: transform 0.2s; transform: scale(1); display: block; margin-left: auto; margin-right: auto;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';" class="r-stretch"></section>
 
 <section id="the-servers-can-be-integrated-and-accessed-via-docker-which-packages-software-into-standardized-units-that-can-be-built-tested-and-deployed." class="title-slide slide level2 center" data-background="final-presentation_files/img/subtopic-slide-2-1.png" data-transition="fade-in slide-out" data-transition-speed="slow">
 <h2>The servers can be integrated and accessed via Docker which packages software into standardized units that can be built, tested, and deployed.</h2>
@@ -446,7 +457,7 @@
 <div class="column">
 <p><img data-src="final-presentation_files/img/docker.webp" style="width: 100%; transition: transform 0.2s; transform: scale(1);" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"></p>
 </div><div class="column">
-<p><img data-src="final-presentation_files/img/docker.png" style="width: 100%; transition: transform 0.2s; transform: scale(1);" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"></p>
+<p><img data-src="final-presentation_files/img/docker_layers.png" style="width: 80%; transition: transform 0.2s; transform: scale(1);" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"></p>
 </div></div>
 </section>
 </section>
@@ -467,7 +478,7 @@
 
 <section id="we-developed-a-shiny-dashboard-to-run-this-pipeline-interactively." class="title-slide slide level2 center" data-background="final-presentation_files/img/subtopic-slide-2-1.png" data-transition="fade-in slide-out" data-transition-speed="slow">
 <h2>We developed a shiny dashboard to run this pipeline interactively.</h2>
-<p>::: {style=“text-align: center;”} <video width="100%" controls=""> <source src="final-presentation_files/img/dashboard.mp4" type="video/mp4"> Your browser does not support the video tag. </video> :::</p>
+<video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="dashboard-90fps.mp4"></video>
 </section>
 
 <section id="we-created-dockerfiles-to-build-the-image-layers-and-pushed-them-to-docker-hub." class="title-slide slide level2 center" data-background="final-presentation_files/img/subtopic-slide-2-1.png" data-transition="fade-in slide-out" data-transition-speed="slow">
@@ -487,7 +498,7 @@
 
 <section id="running-the-pre-processing-scrnaseq-pipeline-via-opencpu" class="title-slide slide level2 center" data-background="final-presentation_files/img/subtopic-slide-2-1.png" data-transition="fade-in slide-out" data-transition-speed="slow">
 <h2>Running the pre-processing scRNAseq pipeline via OpenCPU</h2>
-<p>::: {style=“text-align: center;”} <video width="100%" controls=""> <source src="final-presentation_files/img/dashboard.mp4" type="video/mp4"> Your browser does not support the video tag. </video> :::</p>
+<video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="ocpu_fast.mp4"></video>
 </section>
 
 <section id="api-documentation-on-how-to-run-the-scrnaseq-pre-processing-pipeline-on-opencpu" class="title-slide slide level2 center" data-background="final-presentation_files/img/subtopic-slide-2-1.png" data-transition="fade-in slide-out" data-transition-speed="slow">
@@ -518,7 +529,7 @@
 <section id="we-developed-an-interactive-dashboardreactive-framework-in-shiny-for-the-scrnaseq-pipeline" class="title-slide slide level2 center" data-background="final-presentation_files/img/subtopic-slide-2-1.png" data-transition="fade-in slide-out" data-transition-speed="slow">
 <h2>We developed an interactive dashboard/reactive framework in Shiny for the scRNAseq pipeline</h2>
 
-</section>
+<img data-src="final-presentation_files/img/shiny_dashboard.png" style="width: 100%; transition: transform 0.2s; transform: scale(1);display: block; margin-left: auto; margin-right: auto;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';" class="r-stretch"></section>
 
 <section id="the-project-enhanced-the-reproducibility-and-efficiency-in-analyzing-large-datasets-such-as-scrna-sequences-through-a-robust-web-based-pipeline-deployment" class="title-slide slide level2 center" data-background="final-presentation_files/img/subtopic-slide-2-1.png" data-transition="fade-in slide-out" data-transition-speed="slow">
 <h2>The project enhanced the reproducibility and efficiency in analyzing large datasets such as scRNA sequences through a robust, web-based pipeline deployment</h2>
@@ -552,8 +563,9 @@
 </ul>
 </section>
 </section>
-<section id="thank-you" class="title-slide slide level1 center" data-background="final-presentation_files/img/subtopic-slide-2-1.png" data-transition="fade-in slide-out" data-transition-speed="slow">
+<section id="thank-you" class="title-slide slide level1 center" data-background="final-presentation_files/img/topic-slide.png" data-transition="fade-in slide-out" data-transition-speed="slow">
 <h1>THANK YOU!</h1>
+<p>“Deployment of Rstudio Server, Shiny Server and OpenCPU Server for Dimensional Reduction Applications with an scRNAseq Bioinformatics Pipeline”</p>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
@@ -962,6 +974,8 @@
       }
     });
     </script>
+    <script>videojs(video_shortcode_videojs_video1);</script>
+    <script>videojs(video_shortcode_videojs_video2);</script>
     
 
 </body></html>

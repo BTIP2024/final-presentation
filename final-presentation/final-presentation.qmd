@@ -1,6 +1,6 @@
 ---
 title: "PGC Internship 2024: R Team - Final Presentation"
-author: "[Mentor] Mark Joseph Garrovillas, RCh, Tyrone Mariano, Leda Celeste Samin"
+author: "[Mentor] Mark Joseph Garrovillas, RCh, Leda Celeste Samin, Tyrone Mariano"
 date: last-modified
 institution: "Core Facility for Bioinformatics"
 format: 
@@ -33,6 +33,8 @@ editor:
   markdown: 
     wrap: 72
 ---
+
+# Deployment of Rstudio Server, Shiny Server and OpenCPU Server for Dimensional Reduction Applications with an scRNAseq Bioinformatics Pipeline {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
 
 # INTRODUCTION {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
 
@@ -71,18 +73,18 @@ onmouseout="this.style.transform='scale(1)';"}
 
 ::: columns
 ::: column
-![](final-presentation_files/img/steps_projectdev.png){style="display: block; margin-left: auto; margin-right: auto; width: 100%; transition: transform 0.2s; transform: scale(1);"
+![](final-presentation_files/img/steps_projectdev.png){style="display: block; margin-left: auto; margin-right: auto; width: 150%; transition: transform 0.2s; transform: scale(1);"
 onmouseover="this.style.transform='scale(1.05)';"
 onmouseout="this.style.transform='scale(1)';"}
 :::
 
 ::: column
 :::{.incremental}
-- Deploy the RStudio, Shiny, and OpenCPU servers using Docker
+1.  Deploy the RStudio, Shiny, and OpenCPU servers using Docker
 - Easy development and access: OpenCPU, Shiny, & RStudio, can be accessed by the user in their browser using Docker
 - Application deployment: From git, an isolated and standalone application can be started via Docker
-- Expose as a stateless microservice using RESTful API and RPC the major steps in the scRNAseq pipeline and their visualizations
-- Develop an interactive dashboard/reactive framework in Shiny for the scRNA pipeline
+2. Expose as a stateless microservice using RESTful API and RPC the major steps in the scRNAseq pipeline and their visualizations
+3. Develop an interactive dashboard/reactive framework in Shiny for the scRNA pipeline
 :::
 :::
 :::
@@ -107,7 +109,7 @@ onmouseout="this.style.transform='scale(1)';"}
 :::
 :::
 
-## This research project, with cloud computing, should further promote reproducible research through computational reproducibility by having the datasets easily stored, shared, and analyzed. {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+## A reproducible data analysis workflow is implemented with tools like GitHub, Docker, and RMarkdown which interact to manage versions, dependencies, environments and a dynamic document generation. {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
 ![](final-presentation_files/img/reproducible.png){style="width: 100%; transition: transform 0.2s; transform: scale(1); display: block; margin-left: auto; margin-right: auto;"
 onmouseover="this.style.transform='scale(1.05)';"
@@ -119,7 +121,7 @@ onmouseout="this.style.transform='scale(1)';"}
 
 ![](final-presentation_files/img/steps_projectdev.png){style="width: 100%; transition: transform 0.2s; transform: scale(1); display: block; margin-left: auto; margin-right: auto;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"}
 
-## The pre-processing of scRNA sequences pipeline is composed of 8 main steps based on the Seurat R package {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+## General workflow for analyzing scRNAseq for gene expression at the individual level. {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
 ![](final-presentation_files/img/pipeline.png){style="width: 50%; transition: transform 0.2s; transform: scale(1); display: block; margin-left: auto; margin-right: auto;"
 onmouseover="this.style.transform='scale(1.05)';"
@@ -131,6 +133,8 @@ onmouseout="this.style.transform='scale(1)';"}
 
 ## Dimensional reduction and visualization of scRNAseq data can be done using linear methods such as PCA and non-linear methods such as t-SNE and UMAP {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
+![](final-presentation_files/img/three_plots.png){style="width: 100%; transition: transform 0.2s; transform: scale(1); display: block; margin-left: auto; margin-right: auto;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';"}
+
 ## Beyond web application creation, Shiny empowers data scientists with interactive tools for exploration, visualization, and communication. {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
 ![](final-presentation_files/img/shiny-adv.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);display: block; margin-left: auto; margin-right: auto;"
@@ -138,6 +142,10 @@ onmouseover="this.style.transform='scale(1.05)';"
 onmouseout="this.style.transform='scale(1)';"}
 
 ## The OpenCPU system is a server that exposes HTTP api for RPC and data interchange with R for embedded statistical computation (OpenCPU, n.d.). {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+
+![](final-presentation_files/img/opencpu_webpage.png){style="width: 100%; transition: transform 0.2s; transform: scale(1); display: block; margin-left: auto; margin-right: auto;"
+onmouseover="this.style.transform='scale(1.05)';"
+onmouseout="this.style.transform='scale(1)';"}
 
 ## The servers can be integrated and accessed via Docker which packages software into standardized units that can be built, tested, and deployed. {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
@@ -149,7 +157,7 @@ onmouseout="this.style.transform='scale(1)';"}
 :::
 
 ::: column
-![](final-presentation_files/img/docker.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);"
+![](final-presentation_files/img/docker_layers.png){style="width: 80%; transition: transform 0.2s; transform: scale(1);"
 onmouseover="this.style.transform='scale(1.05)';"
 onmouseout="this.style.transform='scale(1)';"}
 :::
@@ -171,9 +179,7 @@ onmouseout="this.style.transform='scale(1)';"}
 
 ## We developed a shiny dashboard to run this pipeline interactively. {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-::: {style="text-align: center;"} <video width="100%" controls>
-<source src="final-presentation_files/img/dashboard.mp4" type="video/mp4">
-Your browser does not support the video tag. </video> :::
+{{< video dashboard-90fps.mp4 >}}
 
 ## We created dockerfiles to build the image layers and pushed them to Docker hub. {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
@@ -199,9 +205,7 @@ onmouseout="this.style.transform='scale(1)';"}
 
 ## Running the pre-processing scRNAseq pipeline via OpenCPU {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
-::: {style="text-align: center;"} <video width="100%" controls>
-<source src="final-presentation_files/img/dashboard.mp4" type="video/mp4">
-Your browser does not support the video tag. </video> :::
+{{< video ocpu_fast.mp4 >}}
 
 ## API documentation on how to run the scRNAseq pre-processing pipeline on OpenCPU {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
@@ -234,6 +238,11 @@ onmouseover="this.style.transform='scale(1.05)';"
 onmouseout="this.style.transform='scale(1)';"}
 
 ## We developed an interactive dashboard/reactive framework in Shiny for the scRNAseq pipeline {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+
+![](final-presentation_files/img/shiny_dashboard.png){style="width: 100%; transition: transform 0.2s; transform: scale(1);display: block; margin-left: auto; margin-right: auto;"
+onmouseover="this.style.transform='scale(1.05)';"
+onmouseout="this.style.transform='scale(1)';"}
+
 
 ## The project enhanced the reproducibility and efficiency in analyzing large datasets such as scRNA sequences through a robust, web-based pipeline deployment {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
 
@@ -284,4 +293,6 @@ onmouseout="this.style.transform='scale(1)';"}
     Biotechnology, 33, 495-502. doi:10.1038/nbt.3192,
     https://doi.org/10.1038/nbt.3192.
 
-# THANK YOU! {data-background="final-presentation_files/img/subtopic-slide-2-1.png" transition="fade-in slide-out" transition-speed="slow"}
+# THANK YOU! {data-background="final-presentation_files/img/topic-slide.png" transition="fade-in slide-out" transition-speed="slow"}
+
+"Deployment of Rstudio Server, Shiny Server and OpenCPU Server for Dimensional Reduction Applications with an scRNAseq Bioinformatics Pipeline"
